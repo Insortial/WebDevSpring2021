@@ -1,2 +1,2 @@
-const BACKEND_URL="http://localhost:5000"
+const BACKEND_URL="https://bronco-marketplace.herokuapp.com/"
 export default BACKEND_URL;
