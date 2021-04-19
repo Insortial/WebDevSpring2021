@@ -64,7 +64,7 @@ function ThreadCardModal({ match }) {
             }
         }
 
-        axios.delete(`http://localhost:5000/api/posts/${match.params.id}`,
+        axios.delete(API_URL + `/api/posts/${match.params.id}`,
         settings)
         .then(() => {
             window.location.href="/home/blog";
@@ -75,7 +75,7 @@ function ThreadCardModal({ match }) {
 
     const addComment = async () => {
         try {
-            await axios.post(`http://localhost:5000/api/comments/${match.params.id}/add`, {
+            await axios.post(API_URL + `/api/comments/${match.params.id}/add`, {
                 body: commentRef.current.value
             }, {
                 headers: {
